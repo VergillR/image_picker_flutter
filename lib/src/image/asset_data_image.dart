@@ -27,7 +27,7 @@ class AssetDataImage extends ImageProvider<AssetDataImage> {
   }
 
   @override
-  ImageStreamCompleter load(AssetDataImage key) {
+  ImageStreamCompleter load(AssetDataImage key, DecoderCallback decode) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key),
       scale: key.scale,
